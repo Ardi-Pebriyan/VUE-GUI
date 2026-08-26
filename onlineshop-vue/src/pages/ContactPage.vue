@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from "vue";
+
 // Daftar informasi kontak yang ditampilkan di sebelah kiri
 const infoKontak = [
   { ikon: "📍", judul: "Alamat", nilai: "Jl. Raya Soreang No. 123, Kab. Bandung" },
@@ -6,6 +8,26 @@ const infoKontak = [
   { ikon: "✉️", judul: "Email", nilai: "info@ardishop.sch.id" },
   { ikon: "🕐", judul: "Jam Layanan", nilai: "Senin - Jumat, 08.00 - 16.00" },
 ];
+
+// Form data
+const nama = ref("");
+const email = ref("");
+const pesan = ref("");
+const terkirim = ref(false);
+
+function kirimPesan() {
+  if (!nama.value || !email.value || !pesan.value) {
+    alert("Semua kolom wajib diisi!");
+    return;
+  }
+  terkirim.value = true;
+  nama.value = "";
+  email.value = "";
+  pesan.value = "";
+  setTimeout(() => {
+    terkirim.value = false;
+  }, 3000);
+}
 </script>
 
 <template>
@@ -28,16 +50,21 @@ const infoKontak = [
         </div>
       </div>
 
-      <form class="form">
+      <form class="form" @submit.prevent="kirimPesan">
         <h2>Kirim Pesan</h2>
+
+        <div v-if="terkirim" class="sukses">
+          Pesan berhasil terkirim! Terima kasih.
+        </div>
+
         <label for="nama">Nama</label>
-        <input id="nama" type="text" placeholder="Nama lengkap kamu" />
+        <input id="nama" v-model="nama" type="text" placeholder="Nama lengkap kamu" />
 
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="email@kamu.com" />
+        <input id="email" v-model="email" type="email" placeholder="email@kamu.com" />
 
         <label for="pesan">Pesan</label>
-        <textarea id="pesan" rows="5" placeholder="Tulis pesan kamu di sini..."></textarea>
+        <textarea id="pesan" v-model="pesan" rows="5" placeholder="Tulis pesan kamu di sini..."></textarea>
 
         <button type="submit">Kirim</button>
       </form>
@@ -110,6 +137,16 @@ const infoKontak = [
 }
 
 /* ===== Field formulir ===== */
+.sukses {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+}
 .form label {
   display: block;
   margin: 0 0 6px;

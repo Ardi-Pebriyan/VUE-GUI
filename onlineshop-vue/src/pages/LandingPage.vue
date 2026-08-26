@@ -38,6 +38,14 @@ const daftarFitur = [
         </article>
       </div>
     </section>
+
+    <section class="promo">
+      <video controls width="480" muted loop>
+        <source src="/video/promo-toko.mp4" type="video/mp4" />
+        Browser kamu tidak mendukung pemutaran video.
+      </video>
+    </section>
+
   </main>
 </template>
 
@@ -65,21 +73,22 @@ const daftarFitur = [
 .cta {
   display: inline-block;
   padding: 12px 32px;
-  background-color: #2e2e3b;
-  color: #0404f3;
+  background-color: #0475f7;
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(4, 117, 247, 0.4);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
 .cta:hover {
+  background-color: #0356c2;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(4, 117, 247, 0.5);
 }
 
 /* ===== Bagian fitur ===== */
@@ -133,5 +142,17 @@ const daftarFitur = [
   margin: 0;
   color: #6c757d;
   line-height: 1.6;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.promo {
+  padding: 32px 24px;
+  text-align: center;
 }
 </style>
