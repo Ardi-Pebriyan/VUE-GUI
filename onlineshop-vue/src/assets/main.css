@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Gaya dasar halaman ---------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #0e0c0c;
+  background-color: #f6fbff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Tata letak konten ---------- */
+main {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 350px 16px;
+  background-color: #0a6ce4;
+}
+
+h1 {
+  color: #010b1b;
+  margin-bottom: 8px;
+}

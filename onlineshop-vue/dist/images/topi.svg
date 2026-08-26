@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <rect width="150" height="150" fill="#eef2f7"/>
+  <ellipse cx="75" cy="78" rx="52" ry="24" fill="#6f42c1"/>
+  <path d="M28 72 a47 47 0 0 1 94 0 l-8 26 a8 8 0 0 1 -8 6 H44 a8 8 0 0 1 -8 -6 Z" fill="#8558d6"/>
+  <rect x="67" y="30" width="16" height="26" rx="4" fill="#6f42c1"/>
+  <rect x="42" y="66" width="66" height="5" rx="2" fill="#5a32a3"/>
+  <text x="75" y="125" font-family="Segoe UI, Arial" font-size="14" fill="#555" text-anchor="middle">Topi Sekolah</text>
+</svg>
