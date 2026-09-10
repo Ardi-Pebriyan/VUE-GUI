@@ -10,25 +10,15 @@ const daftarProduk = [
 </script>
 
 <template>
-  <main>
-    <!-- Banner: judul halaman, warnanya senada dengan landing page dan halaman lainnya -->
-    <section class="banner">
-      <h1>Produk Kami</h1>
-    </section>
-
-    <!-- Daftar produk yang dijual -->
-    <section class="produk">
-      <div class="grid">
-        <ProductCard
-          v-for="produk in daftarProduk"
-          :key="produk.id"
-          :nama="produk.nama"
-          :harga="produk.harga"
-          :gambar="produk.gambar"
-        />
-      </div>
-    </section>
-  </main>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <ProductCard
+      v-for="produk in daftarProduk"
+      :key="produk.id"
+      :nama="produk.nama"
+      :harga="produk.harga"
+      :gambar="produk.gambar"
+    />
+  </div>
 </template>
 
 <style scoped>

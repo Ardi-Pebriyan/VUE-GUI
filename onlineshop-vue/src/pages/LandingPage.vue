@@ -13,7 +13,7 @@ const daftarFitur = [
     judul: "Pembayaran Aman",
     deskripsi: "Transaksi aman dengan berbagai metode bayar.",
   },
-]; 
+];
 </script>
 
 <template>
@@ -45,7 +45,6 @@ const daftarFitur = [
         Browser kamu tidak mendukung pemutaran video.
       </video>
     </section>
-
   </main>
 </template>
 
